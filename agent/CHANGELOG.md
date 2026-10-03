@@ -10,6 +10,16 @@ Changelog label: v 0.1.1
 
 ## v-0.1.1
 
+### [v 0.1.1] 2026-10-03 11:27 am - Record Intergrid release verification
+
+#### Database Changes
+
+- Database update: No (manual).
+
+#### App Codebase Changes
+
+- Record the initial release commit, clean GitHub CI, successful restart, live MCP version 0.1.1, and the next module plan.
+
 ### [v 0.1.1] 2026-10-03 11:20 am - Prepare Intergrid standalone foundation
 
 #### Database Changes
