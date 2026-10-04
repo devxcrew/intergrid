@@ -6,8 +6,12 @@ import { Button } from "@devxcrew/react-ui/components/button";
 import { application } from "../config";
 import { hasPreviewDesk, leavePreviewDesk } from "../auth/preview-session";
 
+import { Outlet, useMatchRoute } from "@tanstack/react-router";
+
 export function Desk() {
   const navigate = useNavigate();
+  const matchRoute = useMatchRoute();
+  const isExact = matchRoute({ to: "/desk", fuzzy: false });
   const canOpen = hasPreviewDesk();
   useEffect(() => {
     if (!canOpen) void navigate({ to: "/login", replace: true });
@@ -43,25 +47,29 @@ export function Desk() {
         </Button>
       }
     >
-      <div className="desk-content">
-        <span className="public-eyebrow">{application.name} / DESK</span>
-        <h1>Your workspace is ready.</h1>
-        <p>
-          The shared main workspace hosts this desk. Your business apps will connect here as they
-          are built.
-        </p>
-        <section className="desk-section">
-          <PanelsTopLeft size={28} />
-          <div>
-            <h2>Start with a clear foundation</h2>
-            <p>Shared UI, reusable framework, and one platform entry point.</p>
-          </div>
-        </section>
-        <p className="desk-preview">
-          This is a frontend preview. No backend authentication or business data connections are
-          enabled.
-        </p>
-      </div>
+      {isExact ? (
+        <div className="desk-content">
+          <span className="public-eyebrow">{application.name} / DESK</span>
+          <h1>Your workspace is ready.</h1>
+          <p>
+            The shared main workspace hosts this desk. Your business apps will connect here as they
+            are built.
+          </p>
+          <section className="desk-section">
+            <PanelsTopLeft size={28} />
+            <div>
+              <h2>Start with a clear foundation</h2>
+              <p>Shared UI, reusable framework, and one platform entry point.</p>
+            </div>
+          </section>
+          <p className="desk-preview">
+            This is a frontend preview. No backend authentication or business data connections are
+            enabled.
+          </p>
+        </div>
+      ) : (
+        <Outlet />
+      )}
     </MainWorkspace>
   );
 }

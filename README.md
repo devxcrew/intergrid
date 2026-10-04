@@ -1,11 +1,13 @@
 # Intergrid
 
-An isolated application foundation with npm Framework and UI packages.
+An isolated application with npm Framework and UI packages. Test 1 added a local Asset discovery and inspection preview.
+
+The product plan and agent coordination files are in [docs](docs/README.md). The [Test 1 proof](docs/TEST-1-PROOF.md) records the five-agent pilot and verified flow.
 
 ## Current flow
 
-Home (`/`) → preview login (`/login`) → desk (`/desk`).
-Preview sessions are frontend-only. Real authentication, RBAC, tenancy, and business APIs are pending.
+Home (`/`) → Explore (`/explore`) → Asset detail (`/desk/assets/<id>`) through preview login (`/login`).
+The Asset list and detail APIs serve seeded data from memory. Preview sessions are frontend-only. Real authentication, RBAC, tenancy, and persistent storage remain pending.
 
 ## Development setup
 

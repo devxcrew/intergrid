@@ -25,3 +25,4 @@ storage/
 .vscode/
 coverage/
 .cache/
+.worktrees/

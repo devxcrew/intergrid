@@ -1,20 +1,18 @@
-# Current task
+# Current Task
 
-Intergrid 0.1.1 is ready for the next development phase.
+Integrate Agent 2's Discovery schema test file into the main branch.
 
-## Completed
+See [Test 3 proof](../docs/TEST-3-PROOF.md) for the passed owner verification mission and integrated checks.
 
-Published npm Framework, UI, and Tools packages are wired through installed public contracts.
-Live MCP metadata identifies Intergrid at version 0.1.1. Environment setup and port 5178 are verified.
-Full local checks, browser flow, refresh, logout, safe port conflicts, and development restart passed.
-GitHub CI completed a clean npm installation and full verification successfully.
+**Status**: COMPLETED
 
-Initial release commit: 91dc9e1a5bba8ae2385a661783642f3192532937.
-CI evidence: https://github.com/devxcrew/intergrid/actions/runs/37101360519.
-Repository: https://github.com/devxcrew/intergrid.
+## Steps
+- Copied `discovery.schema.test.ts` from Agent 2's worktree to the main `src/api/discovery` directory.
+- Ran `npm test`. 10 tests ran and passed (including the 5 Discovery cases).
+- Ran `npm run check`. All checks passed successfully.
+## Workspace GitHub release - 2026-10-04
 
-## Next work
-
-Define the first Intergrid capability, then implement its matching frontend and backend module.
-Follow live MCP rules for providers, validation, resource routes, URL state, and breadcrumbs.
-Connect real identity through Platform Core when available. Preview sessions are not authentication.
+Release title: Record Intergrid module integration.
+Record Discovery, Lab and Remix module integration, test discovery and owner evidence. Asset persistence and Platform identity remain separate acceptance work.
+Update version records, review release checks, then commit and push the current owner branch.
+Preserve existing task history and incomplete acceptance gates.
