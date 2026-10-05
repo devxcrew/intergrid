@@ -1,5 +1,5 @@
 import { resolve } from "node:path";
-import { createApplicationServer, readApplicationConfig } from "@devxcrew/core-framework";
+import { createApplicationServer, readApplicationConfig } from "@devxcrew/framework";
 import Fastify from "fastify";
 import { createAssetProvider } from "./modules/asset/index.js";
 import { createDiscoveryProvider, createDiscoveryRoutes } from "./discovery/index.js";
